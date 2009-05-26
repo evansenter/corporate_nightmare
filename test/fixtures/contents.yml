@@ -1,0 +1,22 @@
+# == Schema Information
+# Schema version: 20090525002647
+#
+# Table name: contents
+#
+#  id                :integer         not null, primary key
+#  created_at        :datetime
+#  updated_at        :datetime
+#  file_file_name    :string(255)
+#  file_content_type :string(255)
+#  file_file_size    :integer
+#  file_updated_at   :datetime
+#  title             :string(255)
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

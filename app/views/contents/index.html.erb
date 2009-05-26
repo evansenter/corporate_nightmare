@@ -1,0 +1,24 @@
+<h1>Listing contents</h1>
+
+<table>
+  <thead>
+    <th>Filename</th>
+  </thead>
+
+<% @contents.each do |content| %>
+  <tr>
+    <td><%= link_to "#{content.title}", :action => :download, :id => content.id %></td>
+    <td><%= link_to 'Show Details', content %></td>
+    
+    <% if logged_in? %>
+      <td><%= link_to 'Edit', edit_content_path(content) %></td>
+      <td><%= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<% if logged_in? %>
+  <br />
+  <%= link_to 'New content', new_content_path %> | <%= link_to 'Manage keys', download_codes_path %>
+<% end %>

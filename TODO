@@ -1,0 +1,5 @@
+Lock down user creation.
+Make the download process a little more clear.
+Put a list of the code details on the batch show page.
+Consolidate authorize_download and get_file
+x_sendfile support

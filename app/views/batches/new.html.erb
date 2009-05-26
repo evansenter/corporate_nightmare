@@ -1,0 +1,19 @@
+<h1>New batch</h1>
+
+<% form_for(@batch) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :number_of_codes %><br />
+    <%= f.text_field :number_of_codes %>
+  </p>
+  <p>
+    <%= f.label :number_of_downloads %><br />
+    <%= f.text_field :number_of_downloads %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', batches_path %>

@@ -1,0 +1,26 @@
+<h1>Listing download codes</h1>
+
+<table>
+  <thead>
+    <th>Key</th>
+    <th>Downloads Remaining</th>
+    <th>Batch</th>
+    <th>Content downloaded</th>
+  </thead>
+
+<% @download_codes.each do |download_code| %>
+  <tr>
+    <td><%= download_code.key %></td>
+    <td><%= download_code.count %></td>
+    <td><%= download_code.batch.id %></td>
+    <td><%= format_content_downloaded_for(download_code) %></td>
+    <td><%= link_to 'Show', download_code %></td>
+    <td><%= link_to 'Edit', edit_download_code_path(download_code) %></td>
+    <td><%= link_to 'Destroy', download_code, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Generate more codes', new_batch_path %> | <%= link_to "Manage content", contents_path %>

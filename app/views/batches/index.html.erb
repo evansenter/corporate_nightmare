@@ -1,0 +1,21 @@
+<h1>Listing batches</h1>
+
+<table>
+  <tr>
+    <th>Number of codes</th>
+    <th>Number of downloads</th>
+  </tr>
+
+  <% @batches.each do |batch| %>
+    <tr>
+      <td><%=h batch.number_of_codes %></td>
+      <td><%=h batch.number_of_downloads %></td>
+      <td><%= link_to 'Show', batch %></td>
+      <td><%= link_to 'Destroy batch and codes', batch, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New batch', new_batch_path %> | <%= link_to 'Existing codes', download_codes_path %>

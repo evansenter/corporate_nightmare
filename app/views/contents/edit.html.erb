@@ -1,0 +1,17 @@
+<h1>Editing content</h1>
+
+<% form_for(@content) do |form| %>
+  <%= form.error_messages %>
+
+  <p>
+    <%= label :content, :title %>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @content %> |
+<%= link_to 'Back', contents_path %>

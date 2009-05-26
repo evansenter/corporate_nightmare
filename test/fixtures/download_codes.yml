@@ -1,0 +1,20 @@
+# == Schema Information
+# Schema version: 20090525002647
+#
+# Table name: download_codes
+#
+#  id         :integer         not null, primary key
+#  key        :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  count      :integer
+#  batch_id   :integer
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  key: MyString
+
+two:
+  key: MyString

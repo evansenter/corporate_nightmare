@@ -1,0 +1,17 @@
+<p>
+  <b>Key:</b>
+  <%=h @download_code.key %>
+</p>
+
+<p>
+  <b>Number of downloads remaining:</b>
+  <%=h @download_code.count %>
+</p>
+
+<p>
+  <b>Batch:</b>
+  <%= @download_code.batch.id %>
+</p>
+
+<%= link_to 'Edit', edit_download_code_path(@download_code) %> |
+<%= link_to 'Back', download_codes_path %>

@@ -1,0 +1,14 @@
+<% form_tag "/contents/authorize_download" do |form| %>
+  <%= hidden_field_tag :content_id, @content.id %>
+
+  <p>
+    <%= label_tag :key %>
+    <%= text_field_tag :key %>
+  </p>
+  
+  <p>
+    <%= submit_tag "Download file" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', contents_path %>

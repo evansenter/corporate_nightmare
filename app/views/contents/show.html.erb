@@ -1,0 +1,9 @@
+<p>
+  <b>Title:</b>
+  <%= logged_in? ? link_to("Download #{h @content.title}", :action => "get_file", :id => @content.id) : h(@content.title) %>
+</p>
+
+<% if logged_in? %>
+  <%= link_to 'Edit', edit_content_path(@content) %> |
+<% end %>
+<%= link_to 'Back', contents_path %>

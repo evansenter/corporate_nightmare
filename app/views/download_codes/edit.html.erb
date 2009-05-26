@@ -1,0 +1,22 @@
+<h1>Editing download code</h1>
+
+<% form_for(@download_code) do |form| %>
+  <%= form.error_messages %>
+  
+  <p>
+    <%= form.label :key %><br />
+    <%= form.text_field :key %>
+  </p>
+  
+  <p>
+    <%= form.label :count %><br />
+    <%= form.text_field :count %>
+  </p>
+
+  <p>
+    <%= form.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @download_code %> |
+<%= link_to 'Back', download_codes_path %>
